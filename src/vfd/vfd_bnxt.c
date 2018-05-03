@@ -376,6 +376,7 @@ vfd_bnxt_vf_msb_event_callback(uint16_t port_id, enum rte_eth_event_type type, v
 		case HWRM_CFA_TUNNEL_FILTER_FREE:
 		case HWRM_TUNNEL_DST_PORT_QUERY:
 			add_refresh = true;
+			p->retval = RTE_PMD_BNXT_MB_EVENT_PROCEED;
 			break;
 		/* Allow */
 		case HWRM_VER_GET:
